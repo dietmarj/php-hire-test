@@ -40,7 +40,7 @@
         $('.zutat').on('click',function(e){ //on add input button click
             e.preventDefault();
             if(x < max_fields){ //max input box allowed
-                $(wrapper).append('<row><div class="form-group row"><label class="col-sm-2 col-form-label col-form-label-lg" for="name">Zutat</label><div class="col-sm-8"><input type="text" name="Ingredients[]" class="form-control" value="" maxlength="255"/></div><div class="col-sm-2"><a href="#" class="remove_field form-control btn btn-danger">Entferne</a></div></div></row>');
+                $(wrapper).append('<row><div class="form-group row"><label class="col-sm-2 col-form-label col-form-label-lg" for="name">Zutat</label><div class="col-sm-8"><input type="text" name="Ingredients[]" class="form-control" value="" maxlength="255" required></div><div class="col-sm-2"><a href="#" class="remove_field form-control btn btn-danger">Entferne</a></div></div></row>');
                 x++;
             }
         });

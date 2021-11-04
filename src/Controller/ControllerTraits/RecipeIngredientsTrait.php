@@ -22,7 +22,7 @@ trait RecipeIngredientsTrait
             if(!empty($requestData['Ingredients']) && count($requestData['Ingredients']) > 0) {
                 $associations = $requestData['Ingredients'];
                 foreach ($associations as $association) {
-                    if(!empty($association)) {
+                    if(!empty(trim($association))) {
                         $data = ['recipe_id' => $recipe->id, 'ingredient' => $association];
                         $ingredient = $ingredientsTable->newEmptyEntity();
                         $ingredientsTable->patchEntity($ingredient, $data);
